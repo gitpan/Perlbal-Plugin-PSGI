@@ -1,0 +1,24 @@
+NAME
+    Perlbal::Plugin::PSGI - PSGI web server on Perlbal
+
+SYNOPSIS
+      LOAD PSGI
+      CREATE SERVICE psgi
+        SET role    = web_server
+        SET listen  = 127.0.0.1:80
+        SET plugins = psgi
+        PSGI_APP    = /path/to/app.psgi
+      ENABLE psgi
+
+DESCRIPTION
+    This is a Perlbal plugin to allow any PSGI application run natively
+    inside Perlbal process.
+
+AUTHOR
+    Tatsuhiko Miyagawa <miyagawa@bulknews.net>
+
+    Based on Perlbal::Plugin::Cgilike written by Martin Atkins.
+
+LICENSE
+    This module is licensed under the same terms as Perl itself.
+
